@@ -1,12 +1,11 @@
 {
-    "name": "babylonjs-typescript-webpack-template",
+    "name": "ex-dot-vite",
     "version": "0.0.1",
-    "description": "A simple scene using Babylon.js, typescript and vite. It's all in the reflexes.",
+    "description": "Ex. vite template. It's all in the reflexes.",
     "main": "index.ts",
     "devDependencies": {
         "@babylonjs/core": "^6.45.1",
         "@babylonjs/gui-editor": "^6.45.1",
-        "@babylonjs/havok": "^1.3.1",
         "@babylonjs/inspector": "^6.45.1",
         "@babylonjs/loaders": "^6.45.1",
         "@babylonjs/materials": "^6.45.1",
@@ -14,7 +13,6 @@
         "@types/jest": "^29.5.12",
         "@typescript-eslint/eslint-plugin": "^7.0.1",
         "@typescript-eslint/parser": "^7.0.1",
-        "ammojs-typed": "^1.0.6",
         "cross-env": "^7.0.3",
         "eslint": "^8.56.0",
         "jest": "^29.7.0",
@@ -23,7 +21,7 @@
         "ts-jest": "^29.1.2",
         "typescript": "^5.3.3",
         "vite": "^5.1.3",
-        "vite-plugin-glsl": "^1.2.1"
+        "vite-plugin-static-copy": "^1.0.1"
     },
     "scripts": {
         "dev": "vite",
@@ -36,7 +34,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/knutsoned/babylonjs-vite-es6"
+        "url": "https://github.com/knutsoned/ex-dot-vite"
     },
     "keywords": [
         "Babylon.js",
@@ -46,14 +44,13 @@
         "es6"
     ],
     "author": {
-        "name": "Raanan Weber",
-        "email": "info@raananweber.com",
-        "url": "http://blog.raananweber.com/"
+        "name": "Ed Knutson",
+        "email": "knutsoned@gmail.com"
     },
-    "license": "Apache-2.0",
+    "license": "MPL-2.0",
     "bugs": {
-        "url": "https://github.com/knutsoned/babylonjs-vite-es6/issues"
+        "url": "https://github.com/knutsoned/ex-dot-vite/issues"
     },
-    "homepage": "https://github.com/knutsoned/babylonjs-vite-es6",
+    "homepage": "https://github.com/knutsoned/ex-dot-vite",
     "type": "module"
 }
