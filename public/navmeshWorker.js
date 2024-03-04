@@ -1,6 +1,6 @@
-importScripts("https://preview.babylonjs.com/recast.js");
+importScripts("recast.wasm.js");
 
-onmessage = function(messageEvent) {
+onmessage = function (messageEvent) {
     // get message datas
     const meshData = messageEvent.data;
     const positions = meshData[0];
@@ -35,7 +35,11 @@ onmessage = function(messageEvent) {
 
         // get recast uint8array
         const navmeshData = navMesh.getNavmeshData();
-        const arrView = new Uint8Array(recast.HEAPU8.buffer, navmeshData.dataPointer, navmeshData.size);
+        const arrView = new Uint8Array(
+            recast.HEAPU8.buffer,
+            navmeshData.dataPointer,
+            navmeshData.size
+        );
         const ret = new Uint8Array(navmeshData.size);
         ret.set(arrView);
         navMesh.freeNavmeshData(navmeshData);
@@ -43,4 +47,4 @@ onmessage = function(messageEvent) {
         // job done, returns the result
         postMessage(ret);
     });
-}
+};
