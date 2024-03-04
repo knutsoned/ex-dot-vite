@@ -2,10 +2,10 @@ import type { Engine } from "@babylonjs/core/Engines/engine";
 import type { Scene } from "@babylonjs/core/scene";
 
 // Change this import to check other scenes
-//import { DefaultSceneWithTexture } from "./scenes/defaultWithTexture";
+import { DefaultSceneWithTexture } from "./scenes/defaultWithTexture";
 //import { LoadModelAndEnvScene } from "./scenes/loadModelAndEnv";
-import { NavigationMeshRecast } from "./scenes/navigationMeshRecast";
-//import { PhysicsSceneWithAmmo } from "./scenes/physicsWithAmmo";
+//import { NavigationMeshRecast } from "./scenes/navigationMeshRecast";
+//import { PhysicsSceneWithRapier } from "./scenes/physicsWithRapier";
 
 export interface CreateSceneClass {
     createScene: (engine: Engine, canvas: HTMLCanvasElement) => Promise<Scene>;
@@ -17,8 +17,8 @@ export interface CreateSceneModule {
 }
 
 export const getSceneModule = (): CreateSceneClass => {
-    //return new DefaultSceneWithTexture();
+    return new DefaultSceneWithTexture();
     //return new LoadModelAndEnvScene();
-    return new NavigationMeshRecast();
-    //return new PhysicsSceneWithAmmo();
+    //return new NavigationMeshRecast();
+    //return new PhysicsSceneWithRapier();
 };

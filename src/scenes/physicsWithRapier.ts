@@ -5,8 +5,7 @@ import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
 import { CreateSphere } from "@babylonjs/core/Meshes/Builders/sphereBuilder";
 import { CreateGround } from "@babylonjs/core/Meshes/Builders/groundBuilder";
-import Ammo from "ammojs-typed";
-import { AmmoJSPlugin } from "@babylonjs/core/Physics/Plugins/ammoJSPlugin";
+//import { AmmoJSPlugin } from "@babylonjs/core/Physics/Plugins/ammoJSPlugin";
 import "@babylonjs/core/Physics/physicsEngineComponent";
 
 // If you don't need the standard material you will still need to import it since the scene requires it.
@@ -14,7 +13,7 @@ import "@babylonjs/core/Materials/standardMaterial";
 import { PhysicsImpostor } from "@babylonjs/core/Physics/physicsImpostor";
 import { CreateSceneClass } from "../createScene";
 
-export class PhysicsSceneWithAmmo implements CreateSceneClass {
+export class PhysicsSceneWithRapier implements CreateSceneClass {
     createScene = async (
         engine: Engine,
         canvas: HTMLCanvasElement
@@ -22,10 +21,12 @@ export class PhysicsSceneWithAmmo implements CreateSceneClass {
         // This creates a basic Babylon Scene object (non-mesh)
         const scene = new Scene(engine);
 
+        /*
         scene.enablePhysics(
             null,
             new AmmoJSPlugin(true, await Ammo.call(this))
         );
+        */
 
         // This creates and positions a free camera (non-mesh)
         const camera = new ArcRotateCamera(
